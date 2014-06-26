@@ -8,46 +8,46 @@ body{
 	margin:0px;
 	padding-top: 70px; 
 }
-	.site-header{
+.site-header{
+	@include make-row();
+	color: white;
+	a{
+		color: inherit;
+		&:hover{
+			color: $menuHover;
+		}
+			
+	}
+	.site-logo{
+		@include make-sm-column(5);
+	}
+	.animals{
+		@include make-sm-column(7);
+	}
+	.site-nav{
+		@include make-sm-column(12);
+		color: $menuColor;
+	}
+}
+.site-content{
+	@include make-row();
+	.featured{
+		//@include make-sm-column-push(1);
+		@include make-sm-column(12);
+		padding: 10px 0;
+	}
+	.site-widgets{
 		@include make-row();
-		color: white;
-		a{
-			color: inherit;
-			&:hover{
-				color: $menuHover;
-			}
-				
-		}
-		.site-logo{
-			@include make-sm-column(5);
-		}
-		.animals{
-			@include make-sm-column(7);
-		}
-		.site-nav{
-			@include make-sm-column(12);
-			color: $menuColor;
+		.widget{
+			@include make-sm-column(4);
 		}
 	}
-	.site-content{
-		@include make-row();
-		.featured{
-			//@include make-sm-column-push(1);
-			@include make-sm-column(12);
-			padding: 10px 0;
-		}
-		.site-widgets{
-			@include make-row();
-			.widget{
-				@include make-sm-column(4);
-			}
-		}
+}
+
+.site-footer{
+	@include make-row();
+	.site-info{
+		@include make-sm-column(5);
+		@include make-sm-column-offset(5);
 	}
-	
-	.site-footer{
-		@include make-row();
-		.site-info{
-			@include make-sm-column(5);
-			@include make-sm-column-offset(5);
-		}
-	}
+}

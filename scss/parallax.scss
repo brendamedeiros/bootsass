@@ -1,0 +1,81 @@
+@import "compass";
+@import "bootstrap";
+
+$white: #FFF;
+$blue: #306d9f;
+$width: 100%;
+
+html, body{
+	width: 100%;
+	height: 100%;
+}
+@mixin sections-parallax($folder, $image, $extension, $height){
+	background: url('../'+$folder + '/' +$image + '.' + $extension) no-repeat center center fixed; 
+	  display: table;
+	  height: $height;
+	  position: relative;
+	  width: $width;
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+}
+.about, .about-text{
+	@include make-sm-column(6);	
+}
+.home{
+	@include sections-parallax(img, home, jpg, 100%);
+}
+#information{
+//	@include make-sm-column(6);
+	@include sections-parallax(img,estate, jpg, 800px);
+	.panel {
+	  opacity: 0.85;
+	}
+}
+
+footer {
+  padding: 20px 0;
+  .glyphicon {
+  	color: #333333;
+  	font-size: 60px;
+   }
+   &:hover {
+   color: $blue;
+   }
+}
+#services {
+  //@include make-sm-column(3);
+  background-color: $blue;
+  color: $white;
+ 	.glyphicon {
+		border: 2px solid $white;
+		border-radius: 50%;
+		display: inline-block;
+		font-size: 60px;
+		height: 140px;
+		line-height: 140px;
+		text-align: center;
+		vertical-align: middle;
+		width: 140px;
+	}
+}
+
+.pad-section {
+  padding: 50px 0;
+	img {
+	  width: $width;
+	}
+}
+
+.text-vcenter {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  h1 {
+	  font-size: 4.5em;
+	  font-weight: 700;
+	  margin: 0;
+	  padding: 0;
+	}
+}
