@@ -1,0 +1,53 @@
+@import "compass";
+@import "bootstrap";
+
+$menuColor: #000;
+$menuHover: #F0F;
+body{
+
+	margin:0px;
+	padding-top: 70px; 
+}
+	.site-header{
+		@include make-row();
+		color: white;
+		a{
+			color: inherit;
+			&:hover{
+				color: $menuHover;
+			}
+				
+		}
+		.site-logo{
+			@include make-sm-column(5);
+		}
+		.animals{
+			@include make-sm-column(7);
+		}
+		.site-nav{
+			@include make-sm-column(12);
+			color: $menuColor;
+		}
+	}
+	.site-content{
+		@include make-row();
+		.featured{
+			//@include make-sm-column-push(1);
+			@include make-sm-column(12);
+		}
+		.site-widgets{
+			@include make-row();
+			padding: 10px 0;
+			.widget{
+				@include make-sm-column(4);
+			}
+		}
+	}
+	
+	.site-footer{
+		@include make-row();
+		.site-info{
+			@include make-sm-column(5);
+			@include make-sm-column-offset(5);
+		}
+	}
