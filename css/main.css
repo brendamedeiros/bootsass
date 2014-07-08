@@ -7998,7 +7998,7 @@ body {
     width: 100%;
   }
 }
-/* line 39, ../scss/main.scss */
+/* line 38, ../scss/main.scss */
 .site-content .site-widgets {
   margin-left: -15px;
   margin-right: -15px;
@@ -8012,7 +8012,7 @@ body {
 .site-content .site-widgets:after {
   clear: both;
 }
-/* line 41, ../scss/main.scss */
+/* line 40, ../scss/main.scss */
 .site-content .site-widgets .widget {
   position: relative;
   min-height: 1px;
@@ -8020,14 +8020,14 @@ body {
   padding-right: 15px;
 }
 @media (min-width: 768px) {
-  /* line 41, ../scss/main.scss */
+  /* line 40, ../scss/main.scss */
   .site-content .site-widgets .widget {
     float: left;
     width: 33.33333%;
   }
 }
 
-/* line 47, ../scss/main.scss */
+/* line 46, ../scss/main.scss */
 .site-footer {
   margin-left: -15px;
   margin-right: -15px;
@@ -8041,7 +8041,7 @@ body {
 .site-footer:after {
   clear: both;
 }
-/* line 49, ../scss/main.scss */
+/* line 48, ../scss/main.scss */
 .site-footer .site-info {
   position: relative;
   min-height: 1px;
@@ -8049,14 +8049,14 @@ body {
   padding-right: 15px;
 }
 @media (min-width: 768px) {
-  /* line 49, ../scss/main.scss */
+  /* line 48, ../scss/main.scss */
   .site-footer .site-info {
     float: left;
     width: 41.66667%;
   }
 }
 @media (min-width: 768px) {
-  /* line 49, ../scss/main.scss */
+  /* line 48, ../scss/main.scss */
   .site-footer .site-info {
     margin-left: 41.66667%;
   }

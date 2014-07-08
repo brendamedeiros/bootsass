@@ -60,7 +60,7 @@
   <!-- /second section -->
 
   <!-- third section - Services -->
-  <div id="services" class="services pad-section">
+  <div class="services pad-section">
     <div class="container">
       <h2 class="text-center">Our Services</h2> <hr />
       <div class="all-services text-center">

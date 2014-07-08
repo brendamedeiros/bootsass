@@ -32,7 +32,6 @@ body{
 .site-content{
 	@include make-row();
 	.featured{
-		//@include make-sm-column-push(1);
 		@include make-sm-column(12);
 		padding: 10px 0;
 	}

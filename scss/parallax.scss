@@ -9,28 +9,34 @@ html, body{
 	width: 100%;
 	height: 100%;
 }
-@mixin sections-parallax($folder, $image, $extension, $height){
+@mixin sections-parallax($folder, $image, $extension){
 	background: url('../'+$folder + '/' +$image + '.' + $extension) no-repeat center center fixed; 
 	  display: table;
-	  height: $height;
+	  height: 100%;
 	  position: relative;
 	  width: $width;
 	  -webkit-background-size: cover;
 	  -moz-background-size: cover;
 	  -o-background-size: cover;
-	  background-size: cover;
 }
-.about, .about-text{
-	@include make-sm-column(6);	
+#about{
+	.about-text, .about-img{
+		@include make-row();
+		@include make-sm-column(6);
+	}
 }
 .home{
-	@include sections-parallax(img, home, jpg, 100%);
+	@include sections-parallax(img, home, jpg);
 }
+
 #information{
-//	@include make-sm-column(6);
-	@include sections-parallax(img,estate, jpg, 800px);
+	@include make-row();
+	@include sections-parallax(img,estate, jpg);
+	.info-columns{
+		@include make-sm-column(6);
+	}
 	.panel {
-	  opacity: 0.85;
+		  opacity: 0.85;
 	}
 }
 
@@ -44,11 +50,22 @@ footer {
    color: $blue;
    }
 }
-#services {
-  //@include make-sm-column(3);
-  background-color: $blue;
-  color: $white;
- 	.glyphicon {
+.services {
+	background-color: $blue;
+	color: $white;
+	.all-services {
+		@include make-row();
+		.service {
+			@include make-sm-column(3);
+			@include make-xs-column(6);
+		}
+	}
+	
+	.text-services {
+		@include make-row();
+		@include make-sm-column(12);
+	}
+	.glyphicon {
 		border: 2px solid $white;
 		border-radius: 50%;
 		display: inline-block;
